@@ -1,6 +1,7 @@
 .Titles{
     padding: 20px;
     text-align: center;
+    color: cornflowerblue;
 }
 .Titles P{
     color: burlywood;
@@ -11,5 +12,8 @@
     text-align: center;
 }
 .yogaimg{
+    text-align: center;
+}
+.registrationform{
     text-align: center;
 }
