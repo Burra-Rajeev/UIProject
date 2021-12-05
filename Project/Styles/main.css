@@ -1,12 +1,6 @@
 .Titles{
     padding: 20px;
     text-align: center;
-    color: cornflowerblue;
-}
-.Titles P{
-    color: burlywood;
-    font-size: large;
-    text-decoration: none;
 }
 .healthimg{
     text-align: center;
@@ -16,4 +10,15 @@
 }
 .registrationform{
     text-align: center;
+}
+.container img{
+    border:4px solid yellow;
+    border-radius: 15px;
+}
+.container{
+    font-size: 20px;
+}
+.Titles h1{
+    background-color:cadetblue;
+    color:crimson;
 }
