@@ -1,6 +1,10 @@
 .container{
     font-size: 20px;
+    background-color: rgb(196, 172, 113);
 }
 .container h2 {
   color: indianred;
+}
+.accordion-button h3{
+  color: coral;
 }

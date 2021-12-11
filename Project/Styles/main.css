@@ -17,8 +17,20 @@
 }
 .container{
     font-size: 20px;
+    
 }
 .Titles h1{
-    background-color:cadetblue;
+    font-style:oblique;
+    background-color:rgb(97, 182, 115);
     color:crimson;
+}
+.box {
+    float: left;
+    height: 300px;
+    width: 620px;
+    margin: 10px;
+    padding: 15px;
+}
+.img{
+    background-color: rgb(196, 172, 113);
 }

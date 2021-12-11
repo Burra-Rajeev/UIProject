@@ -2,31 +2,94 @@
 <html>
 
 <head>
-    <title>javascript</title>
+    <title>Java Script</title>
     <link rel="stylesheet" href="../bootstrap-5.1.1-dist/css/bootstrap.min.css">
+    <style>
+        .errortext {
+            color: red;
+            display: none;
+        }
+        .bgimg{
+            background-color: rgb(196, 172, 113);
+        }
+    </style>
+    <script>
+        function validateregiform() {
+            var uname = document.forms["registrationForm"]["username"].value;
+            if (uname != "" && uname.length >= 8) {
+                document.getElementById("unameerror").style.display = "none";
+            } else {
+                document.getElementById("unameerror").style.display = "block";
+            }
+
+            var email = document.forms["registrationForm"]["email"].value;
+            var emailfilter = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (email == "") {
+                document.getElementById("emailerror").style.display = "block";
+            } else if (!emailfilter.test(email)) {
+                document.getElementById("emailerror").style.display = "block";
+            } else {
+                document.getElementById("emailerror").style.display = "none";
+            }
+
+
+            var password = document.forms["registrationForm"]["password"].value;
+            if (password != "" && password.length >= 8) {
+                document.getElementById("passworderror").style.display = "none";
+            } else {
+                document.getElementById("passworderror").style.display = "block";
+            }
+
+            var confirmpassword = document.forms["registrationForm"]["confirmpassword"].value;
+            if (confirmpassword != "" && confirmpassword == password) {
+                document.getElementById("confirmpassworderror").style.display = "none";
+            } else {
+                document.getElementById("confirmpassworderror").style.display = "block";
+            }
+
+            return false;
+            return true;
+        }
+
+    </script>
 </head>
 
-<body class="bg-secondary  ">
+<body class="bgimg">
     <div class="container pt-3 pb-5">
         <img src="../Images/Mainimages/regi.jpg" height="350px" width="1200px">
     </div>
     <div class="container w-25">
         <h2>Login Form</h2>
-        <form action="main.html" method="post" onsubmit="return validateregiform()">
-            <div>
-                <label>Email:</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter email" required>
-            </div>
-            <div>
-                <label>Password:</label>
-                <input type="password" class="form-control" id="password" placeholder="Enter password" required>
-            </div><br>
-            <div>
-                <button class="btn btn-primary" type="submit">Submit form</button>
+        <form name="registrationForm" action="main.html" method="post" onsubmit="return validateregiform()">
+            <label>Username:</label><br>
+            <input type="text" name="username" id="username"><br>
+            <span id="unameerror" class="errortext">
+                Please enter firstname<br>
+                Firstname should be min 8 characters
+            </span><br>
+
+            <label>Email Id</label><br>
+            <input type="text" name="email" id="email" oninput="validateregiform()"><br>
+            <span id="emailerror" class="errortext">
+                Please enter a valid email address
+            </span><br>
+
+            <label>Password</label><br>
+            <input type="password" name="password" id="password" oninput="validateregiform()"><br>
+            <span id="passworderror" class="errortext">
+                Please enter a valid password<br>
+                password should be min 8 characters
+            </span><br>
+
+            <label>Confirm Password</label><br>
+            <input type="password" name="confirmpassword" id="confirmpassword" oninput="validateregiform()"><br>
+            <span id="confirmpassworderror" class="errortext">
+                Please Confirm password
+            </span><br>
+            <div id="link">
+                <button type="submit" id="link" value="submit"><a href="../Project/main.html">Submit</a></button>
             </div>
         </form>
-    </div>
-
 </body>
 
 </html>
