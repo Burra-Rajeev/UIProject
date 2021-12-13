@@ -1,0 +1,51 @@
+
+ table,th,td{
+    border: 1px  ;
+    border-collapse: collapse;
+    background-color:gray;
+}
+th,td{
+    
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+img{
+   
+    height: 200px;
+    width: 250px;
+      margin: 12px 12px 12px 270px;
+
+}
+strong{
+  color: rgb(165, 127, 255);
+  text-align: center;
+}
+h2 {
+    text-align: center;
+    color:red;
+    background-color: darkkhaki;
+}
+p,td,li{
+    background-color: bisque;
+     box-shadow: deeppink;
+     border: 2px;
+   
+}
+td{
+    
+}
+p{
+   
+}
+
+
+
+
+
+
+    
+
+
+
